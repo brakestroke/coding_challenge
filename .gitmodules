@@ -1,0 +1,3 @@
+[submodule "src/ugv_sim"]
+	path = src/ugv_sim
+	url = git@github.com:agilexrobotics/ugv_gazebo_sim.git

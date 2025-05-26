@@ -1,0 +1,19 @@
+version: '3'
+
+services:
+  ros2-humble:
+    build:
+      context: .
+      dockerfile: Dockerfile.humble
+      args:
+        - USERNAME=ros
+        - USER_UID=1000
+        - USER_GID=1000
+    volumes:
+      - ..:/workspace
+    command: sleep infinity
+    environment:
+      - DISPLAY=${DISPLAY}
+      - QT_X11_NO_MITSHM=1
+    network_mode: host
+    privileged: true
